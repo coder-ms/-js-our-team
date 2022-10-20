@@ -75,27 +75,19 @@ function reset(){
     let numMemers = teamx.length;
     //console.log('totMembers=' + totMembers);
 
-    let picsHTML = document.querySelectorAll('.member');
-    let backfacePicHTML = document.querySelectorAll('.memberImage');
-    let namesHTML = document.querySelectorAll('.memberName');
-    let roleHTML = document.querySelectorAll('.memberRole');
+    let member = document.querySelectorAll('.member');
+    let memberImage = document.querySelectorAll('.memberImage');
+    let namesMember = document.querySelectorAll('.memberName');
+    let roleMember = document.querySelectorAll('.memberRole');
 
     for(let i = 0; i < numMemers; i++){
-        picsHTML[i].style.backgroundImage = `url(../img/${imgArray[i]})`;
-        picsHTML[i].style.backgroundPosition = 'center middle';
-        backfacePicHTML[i].style.backgroundImage = `url(../img/${imgArray[i]})`;
-        backfacePicHTML[i].style.backgroundPosition = 'center middle';
-        namesHTML[i].innerHTML = `${nameArray[i]}`;
-        roleHTML[i].innerHTML = `${roleArray[i]}`;
+        member[i].style.backgroundImage = `url(../img/${imgArray[i]})`;
+        member[i].style.backgroundPosition = 'center middle';
+        memberImage[i].style.backgroundImage = `url(../img/${imgArray[i]})`;
+        memberImage[i].style.backgroundPosition = 'center middle';
+        namesMember[i].innerHTML = `${nameArray[i]}`;
+        roleMember[i].innerHTML = `${roleArray[i]}`;
     }
 }
 
 reset();
-
-
-
-
-
-
-
-
