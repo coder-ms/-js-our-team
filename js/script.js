@@ -16,8 +16,9 @@ BONUS 3:
 Aggiungere attraverso un form un membro al team
 */
 
-//Array
 
+//MILESTONE 0
+//Array
 const team = [
     {
         name: 'Wayne Barnett',
@@ -51,18 +52,47 @@ const team = [
     }
 ];
 
+//MILESTONE 1
 for(let i = 0; i < team.length; i++){
     console.log(team[i].name + ':' + ' ' + team[i].role + ' ' + team[i].image );
-    document.getElementById("app").innerHTML += team[i].image  + '<br>' + team[i].name + ':' + ' ' + team[i].role + '<br><br>';
+    //document.getElementById("app").innerHTML += team[i].image  + '<br>' + team[i].name + ':' + ' ' + team[i].role + '<br><br>';
 }
 
+let arrayOfImg = [];
+let arrayOfNames = [];
+let arrayOfRoles = [];
 for(let value of team){
+    arrayOfImg.push(value.img);
+    arrayOfNames.push(value.name);
+    arrayOfRoles.push(value.role);
     for(let key in value){
         console.log(key + ':' + ' ' + value[key]);
-        
     }
 }
 
+console.log(arrayOfImg);
+console.log(arrayOfNames);
+console.log(arrayOfRoles);
+
+let allMembers = team.length;
+console.log(allMembers);
+
+//MILESTONE 2
+let pictures = document.querySelectorAll('.memberOfTeam');
+let memberName = document.querySelectorAll('.memberName');
+let memberRole = document.querySelectorAll('.memberRole');
+
+for(let i = 0; i < allMembers; i++){
+    pictures[i].style.bgImg = `url(../img/${arrayOfImg[i]})`;
+    pictures[i].innerHTML = `${arrayOfNames[i]}`;
+    pictures[i].innerHTML = `${arrayOfRoles[i]}`;
+}
+
+
+/*
+team = document.createElement('div');
+team.innerText = "This is a paragraph.";
+*/
 
 
 //All getElementById
