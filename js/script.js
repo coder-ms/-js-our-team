@@ -53,22 +53,38 @@ const team = [
 ];
 
 //MILESTONE 1
-for(let i = 0; i < team.length; i++){
-    console.log(team[i].name + ':' + ' ' + team[i].role + ' ' + team[i].image );
-    //document.getElementById("app").innerHTML += team[i].image  + '<br>' + team[i].name + ':' + ' ' + team[i].role + '<br><br>';
-}
+// for(let i = 0; i < team.length; i++){
+//     console.log(team[i].name + ':' + ' ' + team[i].role + ' ' + team[i].image );
+//     document.getElementById("app").innerHTML += team[i].image  + '<br>' + team[i].name + ':' + ' ' + team[i].role + '<br><br>';
+// }
+
+
 
 let arrayOfImg = [];
 let arrayOfNames = [];
 let arrayOfRoles = [];
+// for(let value of team){
+//     arrayOfImg.push(value.img);
+//     arrayOfNames.push(value.name);
+//     arrayOfRoles.push(value.role);
+//     for(let key in value){
+//         console.log(key + ':' + ' ' + value[key]);
+//     }
+// }
+
+// aggiungere per ogni elemento di team un elemento html in pagina
+const appHTML = document.getElementById("app")
+
+
 for(let value of team){
-    arrayOfImg.push(value.img);
-    arrayOfNames.push(value.name);
-    arrayOfRoles.push(value.role);
-    for(let key in value){
-        console.log(key + ':' + ' ' + value[key]);
-    }
+    let membro = team[0]
+
+    let elementoDaAggiungere = document.createElement('div');
+    elementoDaAggiungere.src = "../img/barbara-ramos-graphic-designer.jpg";
+    appHTML.append(elementoDaAggiungere);
 }
+
+
 
 console.log(arrayOfImg);
 console.log(arrayOfNames);
@@ -81,13 +97,13 @@ console.log(allMembers);
 let pictures = document.querySelectorAll('.memberOfTeam');
 let memberName = document.querySelectorAll('.memberName');
 let memberRole = document.querySelectorAll('.memberRole');
-
+/*
 for(let i = 0; i < allMembers; i++){
     pictures[i].style.bgImg = `url(../img/${arrayOfImg[i]})`;
     pictures[i].innerHTML = `${arrayOfNames[i]}`;
     pictures[i].innerHTML = `${arrayOfRoles[i]}`;
 }
-
+*/
 
 /*
 team = document.createElement('div');
