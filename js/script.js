@@ -53,8 +53,36 @@ const team = [
 
 for(let i = 0; i < team.length; i++){
     console.log(team[i].name + ':' + ' ' + team[i].role + ' ' + team[i].image );
+    document.getElementById("app").innerHTML = team[i].image  + '<br>' + team[i].name + ':' + ' ' + team[i].role;
 }
 
+for(let value of team){
+    for(let key in value){
+        console.log(key + ':' + ' ' + value[key]);
+        
+    }
+}
+
+
+
+/*
+function printTeam() {
+    var stringTeam = '';
+
+    for(var prop in team) {
+        if(typeof obj[prop] == 'string') {
+            stringTeam += prop + ': ' + obj[prop]+'; </br>';
+        }
+        else {
+            stringTeam += prop + ': { </br>' + print(obj[prop]) + '}';
+        }
+    }
+    return stringTeam;
+}
+function gfg_Run() { 
+    el_down.innerHTML = printTeam(GFG_object);
+}
+*/
 
 //All getElementById
 const container = document.getElementById('app');
