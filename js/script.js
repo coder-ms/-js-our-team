@@ -53,7 +53,7 @@ const team = [
 
 for(let i = 0; i < team.length; i++){
     console.log(team[i].name + ':' + ' ' + team[i].role + ' ' + team[i].image );
-    document.getElementById("app").innerHTML = team[i].image  + '<br>' + team[i].name + ':' + ' ' + team[i].role;
+    document.getElementById("app").innerHTML += team[i].image  + '<br>' + team[i].name + ':' + ' ' + team[i].role + '<br><br>';
 }
 
 for(let value of team){
@@ -62,6 +62,7 @@ for(let value of team){
         
     }
 }
+
 
 
 //All getElementById
