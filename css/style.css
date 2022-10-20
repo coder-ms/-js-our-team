@@ -28,8 +28,51 @@ img{
 }
 .white{
     background-color: white;
-    height: 576px;
+    height: 1000px;
     width: 1000px;
     margin: 0 auto;
     border-radius: 30px;
 }
+
+
+
+body{
+    font-family: 'Signika Negative', sans-serif;
+}
+
+#ourTeam{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.member-wrapper{
+    position: relative;
+    text-align: center;
+    height: 400px;
+    width: 275px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px 20px;
+    padding: 10px;
+    background: linear-gradient(135deg, #69ff55, #1e4398);
+}
+
+
+.memberImage{
+    height: 300px;
+    width: 150px;
+}
+.memberName{
+    color: black;
+}
+
+.memberRole{
+    color: red;
+}
+.info{
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+

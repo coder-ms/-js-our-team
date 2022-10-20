@@ -19,7 +19,7 @@ Aggiungere attraverso un form un membro al team
 
 //MILESTONE 0
 //Array
-const team = [
+const teamx = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
@@ -52,67 +52,49 @@ const team = [
     }
 ];
 
-//MILESTONE 1
-// for(let i = 0; i < team.length; i++){
-//     console.log(team[i].name + ':' + ' ' + team[i].role + ' ' + team[i].image );
-//     document.getElementById("app").innerHTML += team[i].image  + '<br>' + team[i].name + ':' + ' ' + team[i].role + '<br><br>';
-// }
+let imgArray = [];
+let nameArray = [];
+let roleArray = [];
 
+function reset(){
+    let imgArray = [];
+    let nameArray = [];
+    let roleArray = [];
 
+    //console.log('teamx.length=' + teamx.length);
+    for(let value of teamx){
+        //console.log('value.image=' + value.image);
+        //console.log('value.name=' + value.name);
+        //console.log('value.role=' + value.role);
 
-let arrayOfImg = [];
-let arrayOfNames = [];
-let arrayOfRoles = [];
-// for(let value of team){
-//     arrayOfImg.push(value.img);
-//     arrayOfNames.push(value.name);
-//     arrayOfRoles.push(value.role);
-//     for(let key in value){
-//         console.log(key + ':' + ' ' + value[key]);
-//     }
-// }
+        imgArray.push(value.image);
+        nameArray.push(value.name);
+        roleArray.push(value.role);
+    };
 
-// aggiungere per ogni elemento di team un elemento html in pagina
-const appHTML = document.getElementById("app")
+    let numMemers = teamx.length;
+    //console.log('totMembers=' + totMembers);
 
+    let picsHTML = document.querySelectorAll('.member');
+    let backfacePicHTML = document.querySelectorAll('.memberImage');
+    let namesHTML = document.querySelectorAll('.memberName');
+    let roleHTML = document.querySelectorAll('.memberRole');
 
-for(let value of team){
-    let membro = team[0]
-
-    let elementoDaAggiungere = document.createElement('div');
-    elementoDaAggiungere.src = "../img/barbara-ramos-graphic-designer.jpg";
-    appHTML.append(elementoDaAggiungere);
+    for(let i = 0; i < numMemers; i++){
+        picsHTML[i].style.backgroundImage = `url(../img/${imgArray[i]})`;
+        picsHTML[i].style.backgroundPosition = 'center middle';
+        backfacePicHTML[i].style.backgroundImage = `url(../img/${imgArray[i]})`;
+        backfacePicHTML[i].style.backgroundPosition = 'center middle';
+        namesHTML[i].innerHTML = `${nameArray[i]}`;
+        roleHTML[i].innerHTML = `${roleArray[i]}`;
+    }
 }
 
+reset();
 
 
-console.log(arrayOfImg);
-console.log(arrayOfNames);
-console.log(arrayOfRoles);
-
-let allMembers = team.length;
-console.log(allMembers);
-
-//MILESTONE 2
-let pictures = document.querySelectorAll('.memberOfTeam');
-let memberName = document.querySelectorAll('.memberName');
-let memberRole = document.querySelectorAll('.memberRole');
-/*
-for(let i = 0; i < allMembers; i++){
-    pictures[i].style.bgImg = `url(../img/${arrayOfImg[i]})`;
-    pictures[i].innerHTML = `${arrayOfNames[i]}`;
-    pictures[i].innerHTML = `${arrayOfRoles[i]}`;
-}
-*/
-
-/*
-team = document.createElement('div');
-team.innerText = "This is a paragraph.";
-*/
 
 
-//All getElementById
-const container = document.getElementById('app');
 
 
 
