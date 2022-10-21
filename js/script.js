@@ -52,10 +52,6 @@ const teamx = [
     }
 ];
 
-let imgArray = [];
-let nameArray = [];
-let roleArray = [];
-
 function structCard(){
     let imgArray = [];
     let nameArray = [];
