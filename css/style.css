@@ -16,11 +16,6 @@ main{
     height: calc(100vh - 160px);
     overflow-y: auto;
 }
-
-img{
-    width: 100px;
-    height: 150px;
-}
 .white{
     background-color: white;
     height: 1000px;
@@ -28,8 +23,6 @@ img{
     margin: 0 auto;
     border-radius: 30px;
 }
-
-
 
 body{
     font-family: 'Signika Negative', sans-serif;
@@ -65,7 +58,7 @@ body{
     color: red;
 }
 .info{
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: white;
     border: 1px solid blue;
     border-radius: 10px;

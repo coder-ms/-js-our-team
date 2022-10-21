@@ -17,8 +17,8 @@ Aggiungere attraverso un form un membro al team
 */
 
 
-//MILESTONE 0
-//Array
+
+//Array iniziale con info membri del team
 const teamx = [
     {
         name: 'Wayne Barnett',
@@ -56,38 +56,40 @@ let imgArray = [];
 let nameArray = [];
 let roleArray = [];
 
-function reset(){
+function structCard(){
     let imgArray = [];
     let nameArray = [];
     let roleArray = [];
 
     //console.log('teamx.length=' + teamx.length);
-    for(let value of teamx){
-        //console.log('value.image=' + value.image);
-        //console.log('value.name=' + value.name);
-        //console.log('value.role=' + value.role);
 
-        imgArray.push(value.image);
-        nameArray.push(value.name);
-        roleArray.push(value.role);
+    // Push info del team
+    for(let info of teamx){
+        //console.log('info.image=' + info.image);
+        //console.log('info.name=' + info.name);
+        //console.log('info.role=' + info.role);
+
+        imgArray.push(info.image);
+        nameArray.push(info.name);
+        roleArray.push(info.role);
     };
 
     let numMemers = teamx.length;
     //console.log('totMembers=' + totMembers);
 
     let member = document.querySelectorAll('.member');
-    let memberImage = document.querySelectorAll('.memberImage');
     let namesMember = document.querySelectorAll('.memberName');
     let roleMember = document.querySelectorAll('.memberRole');
 
+    // Stilizzo le card dei membri del team
     for(let i = 0; i < numMemers; i++){
         member[i].style.backgroundImage = `url(../img/${imgArray[i]})`;
-        member[i].style.backgroundPosition = 'center middle';
-        memberImage[i].style.backgroundImage = `url(../img/${imgArray[i]})`;
-        memberImage[i].style.backgroundPosition = 'center middle';
+        member[i].style.borderRadius = '50%';
+        member[i].style.height = '250px';
+        member[i].style.marginTop = '20px';
         namesMember[i].innerHTML = `${nameArray[i]}`;
         roleMember[i].innerHTML = `${roleArray[i]}`;
     }
 }
 
-reset();
+structCard();
